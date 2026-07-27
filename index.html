@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kanban Project Management App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Kanban Board</h1>
+    <form onsubmit="addTask(event)">
+      <input type="text" id="taskInput" placeholder="New Task..." required>
+      <button type="submit">Add Task</button>
+    </form>
+  </header>
+
+  <main class="board">
+    <div class="column" id="todo" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <h2>To Do</h2>
+    </div>
+    <div class="column" id="inprogress" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <h2>In Progress</h2>
+    </div>
+    <div class="column" id="done" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <h2>Done</h2>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
